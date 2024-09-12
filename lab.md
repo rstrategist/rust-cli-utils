@@ -1,6 +1,6 @@
-# Practice Lab: Build a Command Line tool to list files in a directory
+# Built a Command Line tool to list files in a directory
 
-In this lab, you will build a command line tool that lists files in a directory. The tool will take a directory path as an argument and list all the files in the directory. By default, if no directory path is provided, the tool will list files in the current directory.
+Built a command line tool that lists files in a directory. The tool will take a directory path as an argument and list all the files in the directory. By default, if no directory path is provided, the tool will list files in the current directory.
 
 **Learning Objectives**
 
@@ -9,10 +9,6 @@ In this lab, you will build a command line tool that lists files in a directory.
 - Use the `std::fs` module to read files and directories
 
 **Steps:**
-
-For an easy setup with all dependencies installed and a pre-configured Rust and Cargo, [open the repository with Codespaces](https://codespaces.new/alfredodeza/rust-cli-example?quickstart=1)
-
-Alternate setup: Create a new repository in your account for your Rust project. Use this link to [create it in one step](https://github.com/alfredodeza/rust-template/generate).
 
 1. Use the Clap framework to parse command line arguments. Use the [simple example in this repository](./examples/simple/src/main.rs) as a reference
 1. Use the `std::fs` module to read files. For example:
@@ -28,8 +24,6 @@ fn main() {
     }
 }
 ```
-
-**Bonus challenge:** Add options to your tool to list files recursively and to list hidden files.
 
 **Concepts Covered:**
 
