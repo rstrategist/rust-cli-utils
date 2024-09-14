@@ -31,19 +31,19 @@ fn run_lsblk(device: &str) -> serde_json::Value {
 }
 
 fn main() {
-    let matches = clap::App::new("lsblk")
+    let matches = clap::Command::new("lsblk")
         .version("0.0.1")
-        .author("Alfredo Deza")
+        .author("Rashid Rasul")
         .about("lsblk in Rust")
         .arg(
-            clap::Arg::with_name("device")
+            clap::Arg::new("device")
                 .help("Device to query")
                 .required(true)
-                .index(1)
+                .index(1),
         )
         .get_matches();
 
-    let device = matches.value_of("device").unwrap();
+    let device = matches.get_one::<String>("device").unwrap().clone();
     let output = serde_json::to_string(&run_lsblk(&device)).unwrap();
     println!("{}", output);
 }
