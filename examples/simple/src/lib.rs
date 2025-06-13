@@ -10,6 +10,11 @@ fn run_command(command: &str) -> String {
     stdout.to_string()
 }
 
+/// Function to run the lsblk command and return the JSON output for a specific device
+/// # Arguments
+/// * `device` - The name of the device to query (e.g., "sda", "nvme0n1")
+/// # Returns
+/// A serde_json::Value containing the details of the specified device
 pub fn run_lsblk(device: &str) -> serde_json::Value {
     let command = "lsblk -J -o NAME,SIZE,TYPE,MOUNTPOINT";
     let output = run_command(command);
