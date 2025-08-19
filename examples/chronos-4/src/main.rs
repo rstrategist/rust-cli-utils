@@ -7,14 +7,14 @@ use clap::Parser;
 // To run this example, you can use the following command:
 // cargo run -- --help
 // cargo run -- 60
-// cargo run -- --30 --format rfc3339
+// cargo run -- 30 --format rfc3339
 
 /// Generate a timestamp with an optional offset
 #[derive(Parser)]
 #[command(
     name = "timestamp-cli",
     version = "0.1.0",
-    author = "Your Name",
+    author = "Rashid Rasul",
     about = "Generate a timestamp with an optional offset"
 )]
 struct Cli {
