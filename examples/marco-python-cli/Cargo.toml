@@ -1,0 +1,17 @@
+[package]
+name = "marco-python-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "marco_python_cli"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "marco-python-cli"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.2", features = ["derive"] }
+pyo3 = { version = "0.19", features = ["auto-initialize"] }
