@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /",
+  "rawPath": "/",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "POST",
+      "path": "/"
+    }
+  },
+  "body": "{ \"x\": 5, \"y\": 7 }",
+  "isBase64Encoded": false
+}
